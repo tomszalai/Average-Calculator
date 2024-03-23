@@ -17,11 +17,14 @@ while True:
         userinput = float(input("Enter a number here: "))
         if userinput == -1:
             break
+        #  Ignore Zero or negative numbers.
+        if userinput <= 0:
+            print("Invalid option please type in a positive number.")
+        if userinput > 0:
+            usernumber += userinput
+            count += 1
     except ValueError:
         print("Invalid data, please type in a valid number: ")
-    else:
-        usernumber += userinput
-        count += 1
 
 # Average number calculation:
 total = usernumber/count
