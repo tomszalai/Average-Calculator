@@ -7,6 +7,7 @@ Calculate the average of all numbers except the last one -1.
 Print out the result.
 """
 
+
 # Defining 2 variables for the calculation what depending on user input data:
 count = 0
 usernumber = 0
@@ -17,14 +18,19 @@ while True:
         userinput = float(input("Enter a number here: "))
         if userinput == -1:
             break
+        #  Ignore Zero or negative numbers.
+        if userinput <= 0:
+            print("Invalid option please type in a positive number.")
+        if userinput > 0:
+            usernumber += userinput
+            count += 1
     except ValueError:
         print("Invalid data, please type in a valid number: ")
-    else:
-        usernumber += userinput
-        count += 1
 
 # Average number calculation:
 total = usernumber/count
 r_total = round(total, 2)
 
 print(f"\nThe average of your numbers: {r_total}")
+print(f"The sum of your numbers is: {usernumber}")
+print(f"You added {count} numbers.")
