@@ -7,6 +7,7 @@ Calculate the average of all numbers except the last one -1.
 Print out the result.
 """
 
+
 # Defining 2 variables for the calculation what depending on user input data:
 count = 0
 usernumber = 0
@@ -31,3 +32,5 @@ total = usernumber/count
 r_total = round(total, 2)
 
 print(f"\nThe average of your numbers: {r_total}")
+print(f"The sum of your numbers is: {usernumber}")
+print(f"You added {count} numbers.")
